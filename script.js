@@ -42,7 +42,7 @@ function handle_click(id) {
                 card.style.transform = 'scaleX(-1)'
             }
 
-            card.src = `assets/cards/${localStorage.getItem(`card${id}`)}.jpg`
+            card.src = `assets/cards/${localStorage.getItem(`card${id}`)}.webp`
         })
 
         localStorage.setItem(`status${id}`, 'FLIP')
@@ -51,14 +51,14 @@ function handle_click(id) {
 
         sleep(275).then(() => {
             card.style.transform = 'scaleX(1)'
-            card.src = 'assets/cards/back.jpg'
+            card.src = 'assets/cards/back.webp'
         })
         localStorage.setItem(`status${id}`, 'SET')
         localStorage.setItem(`card${id}`, -1)
     }
 }
 
-// function upright_effect(card_number) {
+// function up_effect(card_number) {
 //     const ups = [
 //         'Novidades, Inocência, Espontaneidade, Liberdade',
 //         'Poder, Habilidade, Concentração, Engenhosidade',
@@ -87,7 +87,7 @@ function handle_click(id) {
 //     return ups[card_number]
 // }
 
-// function downright_effect(card_number) {
+// function down_effect(card_number) {
 //     const downs = [
 //         'Ingenuidade, Estupidez, Imprudência, Caos',
 //         'Manipulação, Mau planejamento, Desperdício de Talento',

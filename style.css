@@ -12,9 +12,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  background: url("assets/bg.jpg") center;
+}
+
+body {
+  background-image: url("assets/bg.webp");
+  background-size: cover;
 }
 
 .card_row {
@@ -35,4 +38,22 @@ body {
 img {
   width: 42vh;
   cursor: pointer;
+}
+
+@media only screen and (orientation: portrait) {
+  body {
+    background-image: url("assets/bg-mobile.webp");
+    background-size: contain;
+  }
+
+  .card_row {
+    width: 95%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 20vh;
+    cursor: pointer;
+  }
 }
